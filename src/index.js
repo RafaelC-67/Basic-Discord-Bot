@@ -15,11 +15,8 @@ const client = new Client({
 new CommandHandler({
     client,
     commandsPath: path.join(__dirname, 'commands'),
+    eventsPath: path.join(__dirname, 'events'),
     testServer: '1002844865253625967'
-});
-
-client.on('ready', (c) => {
-    console.log(`${c.user.tag} Ready`);
 });
 
 client.login(process.env.BOT_TOKEN);
